@@ -14,7 +14,7 @@
         }
         .header {
             background: #fff;
-            padding: 10px 0;
+            padding: 14px 0;
             border-bottom: 1px solid #e8e8e8;
         }
         .header-inner {
@@ -27,31 +27,32 @@
         .logo-area {
             display: flex;
             align-items: center;
-            padding-right: 20px;
+            padding-right: 24px;
             border-right: 1px solid #ddd;
-            margin-right: 20px;
+            margin-right: 24px;
         }
         .logo {
-            height: 52px;
+            height: 72px;
         }
         .site-title {
-            font-size: 30px;
+            font-size: 32px;
             color: #1a5fb4;
             font-weight: 500;
             letter-spacing: 2px;
         }
         .nav {
             background: #1e6bb8;
-            height: 46px;
+            padding: 0;
         }
         .nav-inner {
             max-width: 1180px;
             margin: 0 auto;
+            padding: 0 30px;
+        }
+        .nav-row {
             display: flex;
             align-items: center;
-            height: 100%;
-            padding: 0 30px;
-            position: relative;
+            height: 46px;
         }
         .nav a {
             color: #fff;
@@ -62,17 +63,20 @@
             font-size: 14px;
         }
         .nav a:hover { background: rgba(255,255,255,0.12); }
+        .help-row {
+            text-align: right;
+            padding: 8px 30px 10px;
+            background: #1e6bb8;
+        }
         .help-btn {
-            position: absolute;
-            right: 30px;
             background: rgba(255,255,255,0.18);
             border: 1px solid rgba(255,255,255,0.45);
             color: #fff;
             border-radius: 18px;
-            padding: 5px 14px;
+            padding: 6px 16px;
             font-size: 13px;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 5px;
         }
@@ -170,50 +174,20 @@
             line-height: 1.9;
             margin-bottom: 18px;
         }
-        .footer-bottom {
+        .footer-icons {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-            margin-top: 8px;
+            gap: 16px;
+            margin-top: 12px;
         }
-        .gov-error {
-            width: 86px;
-            height: 32px;
-            background: #d32f2f;
-            color: #fff;
-            font-size: 11px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            line-height: 1.1;
-            border-radius: 2px;
-        }
-        .emblem {
-            width: 36px;
+        .gov-error-img {
             height: 36px;
-            background: linear-gradient(135deg, #e8c547, #c9a227);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7a5f00;
-            font-size: 10px;
-            font-weight: bold;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.15);
         }
-        .police-icon {
-            width: 28px;
+        .party-img {
             height: 28px;
-            background: #d32f2f;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 10px;
-            margin-right: 6px;
+            vertical-align: middle;
+            margin-left: 6px;
         }
     </style>
 </head>
@@ -229,13 +203,17 @@
 
     <nav class="nav">
         <div class="nav-inner">
-            <a href="#">首页</a>
-            <a href="#">事务查询</a>
-            <a href="#">专利公报查询</a>
-            <a href="#">高级查询</a>
-            <a href="#">IPC分类查询</a>
-            <a href="#">LOC分类查询</a>
-            <a href="#">数据说明</a>
+            <div class="nav-row">
+                <a href="#">首页</a>
+                <a href="#">事务查询</a>
+                <a href="#">专利公报查询</a>
+                <a href="#">高级查询</a>
+                <a href="#">IPC分类查询</a>
+                <a href="#">LOC分类查询</a>
+                <a href="#">数据说明</a>
+            </div>
+        </div>
+        <div class="help-row">
             <a href="#" class="help-btn">💡 使用说明</a>
         </div>
     </nav>
@@ -339,12 +317,12 @@
             <a href="#">版权声明</a> | <a href="#">联系我们</a>
         </div>
         <div class="footer-info">
-            <span class="police-icon">🚔</span>京公网安备 11040102700058号　主办单位：国家知识产权局　软件维护：知识产权出版社　网站标识码：bm38000007　ICP备案编号：京ICP备05069085号-14<br>
-            版权所有：国家知识产权局（未经许可不得复制）　网站技术支持：010-62086466 / 6421 / 6415
+            主办单位：国家知识产权局　软件维护：知识产权出版社　网站标识码：bm38000007　ICP备案编号：京ICP备05069085号-14<br>
+            京公网安备 11040102700058号　版权所有：国家知识产权局（未经许可不得复制）　网站技术支持：010-62086466 / 6421 / 6415
+            <img src="party.png" alt="党政机关" class="party-img">
         </div>
-        <div class="footer-bottom">
-            <div class="gov-error">政府网站<br>找错</div>
-            <div class="emblem">国</div>
+        <div class="footer-icons">
+            <img src="gov_error.png" alt="政府网站找错" class="gov-error-img">
         </div>
     </footer>
 </body>
